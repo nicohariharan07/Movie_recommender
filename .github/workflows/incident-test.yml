@@ -1,0 +1,19 @@
+
+name: Incident Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  simulate-failure:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Simulate application failure
+        run: |
+          echo "Starting incident simulation..."
+          echo "Testing AI DevOps monitoring system..."
+          exit 1
